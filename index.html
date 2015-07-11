@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="weatherApp">
 <head>
   <meta charset="UTF-8">
   <title>Weather SPA</title>
   <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
 </head>
 <body>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          Angular Weather SPA
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div ng-view>
+      
+    </div>
+  </div>
+  <script src="https://code.angularjs.org/1.4.2/angular.min.js"></script>
   <script src="https://code.angularjs.org/1.4.2/angular-route.min.js"></script>
   <script src="https://code.angularjs.org/1.4.2/angular-resource.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
