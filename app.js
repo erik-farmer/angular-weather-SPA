@@ -14,11 +14,20 @@ weatherApp.config(function($routeProvider) {
   });
 });
 
-// Controllers
-weatherApp.controller('homeController', function($scope) {
-
+// Services
+weatherApp.service('cityService', function() {
+  this.city = 'San Jose, CA';
 });
 
-weatherApp.controller('forecastController', function($scope) {
+// Controllers
+weatherApp.controller('homeController', function($scope, cityService) {
+  $scope.city = cityService.city;
 
+  $scope.$watch('city', function() {
+    cityService.city = $scope.city;
+  })
+});
+
+weatherApp.controller('forecastController', function($scope, cityService) {
+  $scope.city = cityService.city;
 });
