@@ -7,7 +7,7 @@
     function directiveFunction () {
         return {
           restrict: 'E',
-          templateUrl: 'directives/weatherReport.html',
+          templateUrl: './forecast/weatherReport.html',
           replace: true,
           scope: {
             weatherDay: "=", // for passing an object
