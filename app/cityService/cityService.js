@@ -5,6 +5,7 @@
         .service('cityService', serviceFunction);
 
     function serviceFunction() {
-        this.city = 'San Jose, CA';
+        vm = this;
+        vm.city = 'San Jose, CA';
     }
 })();

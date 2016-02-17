@@ -11,11 +11,13 @@
         })
         .when('/forecast', {
           templateUrl: 'forecast/forecast.html',
-          controller: 'forecastController'
+          controller: 'forecastController',
+          controllerAs: 'vm'
         })
         .when('/forecast/:days', {
           templateUrl: 'forecast/forecast.html',
-          controller: 'forecastController'
+          controller: 'forecastController',
+          controllerAs: 'vm'
         });
       });
 })();
