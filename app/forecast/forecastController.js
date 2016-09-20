@@ -9,7 +9,6 @@
     function controllerFunction ($resource, $stateParams, cityService) {
         var vm = this;
         vm.city = cityService.city;
-        console.log(vm);
         vm.days = $stateParams.days || 2;
         vm.convertToDate = convertToDate;
         vm.convertToFahrenheit = convertToFahrenheit;
