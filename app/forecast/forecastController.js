@@ -18,7 +18,7 @@
             {callback: "JSON_CALLBACK" }, { get: { method: "JSONP" }
         });
 
-        vm.weatherResult = vm.weatherAPI.get({ q: vm.city, cnt: vm.days, APPID: 'yourAppIDHere' });
+        vm.weatherResult = vm.weatherAPI.get({ q: vm.city, cnt: vm.days, APPID: '7bbcf001c07af9322ea955c374213763' });
 
         function convertToFahrenheit(degK) {
             return Math.round((1.8 * (degK - 273)) + 32);
