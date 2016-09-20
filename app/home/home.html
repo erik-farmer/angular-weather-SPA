@@ -2,9 +2,8 @@
   <div class="col-md-6 col-md-offset-3">
     <h4>Forecast by City</h4>
     <div class="form-group">
-      <input type="text" class="form-control" ng-model="vm.city" />
-      {{vm.city}}
+      <input type="text" class="form-control" ng-model="vm.cityService.city" city-validator/>
     </div>
-    <a ui-sref="forecast" class="btn btn-primary">Get Forecast</a>
+    <a ui-sref="forecast" class="btn btn-primary" ng-disabled="!vm.cityService.city">Get Forecast</a>
   </div>
 </div>

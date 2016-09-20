@@ -3,7 +3,7 @@
     <a href="#/">Back to Search</a>
   </p>
 
-  Forecast for {{ vm.city }}
+  Forecast for {{ vm.cityService.city }}
   <hr />
   Days: 
   <a ui-sref="forecastDays({days: 2})" ng-class="{ 'bg-primary': days == '2' }">2</a> |

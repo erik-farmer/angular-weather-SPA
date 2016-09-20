@@ -8,7 +8,8 @@
 
     function controllerFunction ($resource, $stateParams, cityService) {
         var vm = this;
-        vm.city = cityService.city;
+        vm.cityService = cityService;
+        // vm.city = cityService.city;
         vm.days = $stateParams.days || 2;
         vm.convertToDate = convertToDate;
         vm.convertToFahrenheit = convertToFahrenheit;
@@ -18,7 +19,7 @@
             {callback: "JSON_CALLBACK" }, { get: { method: "JSONP" }
         });
 
-        vm.weatherResult = vm.weatherAPI.get({ q: vm.city, cnt: vm.days, APPID: '7bbcf001c07af9322ea955c374213763' });
+        vm.weatherResult = vm.weatherAPI.get({ q: vm.cityService.city, cnt: vm.days, APPID: 'yourAPIkey' });
 
         function convertToFahrenheit(degK) {
             return Math.round((1.8 * (degK - 273)) + 32);
