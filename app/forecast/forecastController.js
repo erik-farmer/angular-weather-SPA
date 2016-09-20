@@ -4,12 +4,12 @@
       .module('weatherApp')
       .controller('forecastController', controllerFunction);
 
-    controllerFunction.$inject = ['$resource', '$routeParams', 'cityService'];
+    controllerFunction.$inject = ['$resource', '$stateParams', 'cityService'];
 
-    function controllerFunction ($resource, $routeParams, cityService) {
+    function controllerFunction ($resource, $stateParams, cityService) {
         var vm = this;
         vm.city = cityService.city;
-        vm.days = $routeParams.days || 2;
+        vm.days = $stateParams.days || 2;
         vm.convertToDate = convertToDate;
         vm.convertToFahrenheit = convertToFahrenheit;
 
@@ -18,7 +18,7 @@
             {callback: "JSON_CALLBACK" }, { get: { method: "JSONP" }
         });
 
-        vm.weatherResult = vm.weatherAPI.get({ q: vm.city, cnt: vm.days, APPID: 'YOURAPPIDHERE' });
+        vm.weatherResult = vm.weatherAPI.get({ q: vm.city, cnt: vm.days, APPID: 'yourAppIDHere' });
 
         function convertToFahrenheit(degK) {
             return Math.round((1.8 * (degK - 273)) + 32);

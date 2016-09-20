@@ -2,7 +2,7 @@
 (function () {
     angular
         .module('weatherApp', [
-            'ngRoute',
+            'ui.router',
             'ngResource']
         );
 })();
