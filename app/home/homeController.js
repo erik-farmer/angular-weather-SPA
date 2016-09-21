@@ -8,9 +8,9 @@
 
     function controllerFunction (cityService) {
           var vm = this;
-          vm.cityService = cityService;
+          // vm.cityService = cityService;
           // Curious as to why you need the whole object. Commented out in forecastController.
-          // vm.city = cityService.city;
+          vm.city = cityService.city;
     }
 
 })();

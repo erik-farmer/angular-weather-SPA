@@ -13,7 +13,6 @@
 
         function linkFunction(scope, elm, attrs, ctrl) {
             ctrl.$validators.potato = function(modelValue) {
-                console.log(modelValue);
 
                 var re1='((?:[a-z][a-z]+))';  // Word 1
                 var re2='(,)';    // Any Single Character 1
@@ -22,11 +21,9 @@
 
                 var p = new RegExp(re1+re2+re3+re4,["i"]);
                 if (p.exec(modelValue)) {
-                    console.log('We did it');
                     return true;
                 }
                 else {
-                    console.log('BOOOO');
                     return false;
                 }
             };

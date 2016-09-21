@@ -8,4 +8,5 @@
         var vm = this;
         vm.city = 'San Jose, CA';
     }
+
 })();
