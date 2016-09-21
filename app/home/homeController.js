@@ -8,7 +8,7 @@
 
     function controllerFunction (cityService) {
           var vm = this;
-          vm.city = cityService.city;
+          vm.cityService = cityService;
     }
 
 })();

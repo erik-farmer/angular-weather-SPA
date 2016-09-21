@@ -1,25 +1,33 @@
 // Routes
 (function () {
+
     angular
         .module('weatherApp')
         .config(config);
 
-    function config($routeProvider) {
-        $routeProvider
-            .when('/', {
-                templateUrl: 'home/home.html',
+    function config($stateProvider) {
+
+        $stateProvider
+            .state('home', {
+                url: '/',
                 controller: 'homeController',
-                controllerAs: 'vm'
+                controllerAs: 'vm',
+                templateUrl: 'home/home.html'
             })
-            .when('/forecast', {
-                templateUrl: 'forecast/forecast.html',
+            .state('forecast', {
+                url: '/forecast',
                 controller: 'forecastController',
-                controllerAs: 'vm'
+                controllerAs: 'vm',
+                templateUrl: 'forecast/forecast.html'
             })
-            .when('/forecast/:days', {
-                templateUrl: 'forecast/forecast.html',
+            .state('forecastDays', {
+                name: 'forecastDays',
+                url: '/forecast/{days}',
                 controller: 'forecastController',
-                controllerAs: 'vm'
+                controllerAs: 'vm',
+                templateUrl: 'forecast/forecast.html'
             });
+
     }
+
 })();
