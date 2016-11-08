@@ -12,20 +12,20 @@
                 url: '/',
                 controller: 'homeController',
                 controllerAs: 'vm',
-                templateUrl: 'home/home.html'
+                templateUrl: 'app/home/home.html'
             })
             .state('forecast', {
                 url: '/forecast',
                 controller: 'forecastController',
                 controllerAs: 'vm',
-                templateUrl: 'forecast/forecast.html'
+                templateUrl: 'app/forecast/forecast.html'
             })
             .state('forecastDays', {
                 name: 'forecastDays',
                 url: '/forecast/{days}',
                 controller: 'forecastController',
                 controllerAs: 'vm',
-                templateUrl: 'forecast/forecast.html'
+                templateUrl: 'app/forecast/forecast.html'
             });
 
     }

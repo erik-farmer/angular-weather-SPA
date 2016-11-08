@@ -1,0 +1,28 @@
+{
+  "name": "ng-weather-spa",
+  "version": "1.0.0",
+  "description": "### To run locally using python From the app directory run: `python -m SimpleHTTPServer 8080` or whichwever port you would like.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erik-farmer/angular-weather-SPA.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erik-farmer/angular-weather-SPA/issues"
+  },
+  "homepage": "https://github.com/erik-farmer/angular-weather-SPA#readme",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-jshint": "^2.0.2",
+    "gulp-serve": "^1.4.0",
+    "jshint": "^2.9.4",
+    "run-sequence": "^1.2.2"
+  }
+}
